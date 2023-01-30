@@ -2,6 +2,8 @@ let scrollObject = document.getElementById('car')
 let main__btn = document.querySelector('.main__btn')
 let main_logo = document.querySelector('.main__logo')
 let carRolls = document.querySelector('.car__rolls')
+let bgHome = document.querySelector('.bg-home')
+
 console.log(window.innerWidth)
 if (window.innerWidth >= 1024) {
   window.addEventListener('scroll', () => {
@@ -9,6 +11,8 @@ if (window.innerWidth >= 1024) {
     const screenHeight = document.documentElement.clientHeight
     const screenWidth = document.documentElement.clientWidth
     const scaleSW = screenWidth / 1000
+
+    // const onePercentOpacity = (screenHeight * 0.2) / 100
 
     const scale = scrollTop / screenHeight
 
@@ -18,16 +22,31 @@ if (window.innerWidth >= 1024) {
       if (!scrollObject.classList.contains('fixed')) {
         scrollObject.classList.add('fixed')
       }
+      if (!bgHome.classList.contains('fixed')) {
+        bgHome.classList.add('fixed')
+      }
       // scrollObject.style.position = 'absolute'
       // scrollObject.style.top = `${window.pageYOffset}`
       if (scrollTop < screenHeight * 1.4) {
         carRolls.style.transform = `scale(${
           1.1 - scale * 0.1 * scaleSW
         }) translateX(${(scrollTop - screenHeight) * 0.6 * scaleSW}px)`
+        carRolls.style.zIndex = 1
+      }
+      // if (scrollTop < screenHeight * 1.2) {
+      //   bgHome.style.opacity = 0
+      // }
+      if (scrollTop > screenHeight * 1.2 && scrollTop < screenHeight * 1.4) {
+        bgHome.style.opacity =
+          (scrollTop - screenHeight * 1.2) / (screenHeight * 0.2)
+      }
+      if (scrollTop > screenHeight * 1.45) {
+        carRolls.style.zIndex = 3
       }
     }
     if (scrollTop < screenHeight || scrollTop > screenHeight * 5) {
       scrollObject.classList.remove('fixed')
+      bgHome.classList.remove('fixed')
       carRolls.style.transform = 'none'
     }
     console.log(screenHeight)

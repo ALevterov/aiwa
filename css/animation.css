@@ -66,6 +66,7 @@
 }
 
 .main__logo {
+  position: relative;
   text-align: center;
   font-style: normal;
   font-weight: 700;
@@ -83,15 +84,18 @@
   z-index: 10;
   letter-spacing: 0.3em;
   text-transform: uppercase;
+
+  opacity: 1;
+  transition: 5s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .main__logo > span {
-  margin: 0px 24px;
-}
-
-.main__logo {
+  display: inline-block;
+  margin-top: 100px;
   opacity: 0;
-  transition: 5s;
 }
 
 .main__line {

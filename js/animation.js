@@ -4,6 +4,10 @@ let main_logo = document.querySelector('.main__logo')
 let carRolls = document.querySelector('.car__rolls')
 let bgHome = document.querySelector('.bg-home')
 
+let check = document.getElementById('check')
+let rent = document.getElementById('rent')
+let aiwa = document.getElementById('aiwa')
+
 console.log(window.innerWidth)
 if (window.innerWidth >= 1024) {
   window.addEventListener('scroll', () => {
@@ -36,12 +40,62 @@ if (window.innerWidth >= 1024) {
       // if (scrollTop < screenHeight * 1.2) {
       //   bgHome.style.opacity = 0
       // }
-      if (scrollTop > screenHeight * 1.2 && scrollTop < screenHeight * 1.4) {
+      if (scrollTop > screenHeight * 1.2 && scrollTop < screenHeight * 1.42) {
         bgHome.style.opacity =
           (scrollTop - screenHeight * 1.2) / (screenHeight * 0.2)
       }
+      if (scrollTop < screenHeight * 1.2) {
+        bgHome.style.opacity = 0
+      }
       if (scrollTop > screenHeight * 1.45) {
-        carRolls.style.zIndex = 3
+        carRolls.style.zIndex = 9999
+      }
+
+      // check
+      if (scrollTop > screenHeight * 1.5 && scrollTop < screenHeight * 1.62) {
+        check.style.opacity =
+          (scrollTop - screenHeight * 1.5) / (screenHeight * 0.1)
+        check.style.marginTop = `${
+          (10 * (screenHeight * 0.1)) / (scrollTop - screenHeight * 1.5)
+        }px`
+      }
+      if (scrollTop < screenHeight * 1.5) {
+        check.style.opacity = 0
+        check.style.marginTop = '100px'
+      }
+
+      //rent
+      if (scrollTop > screenHeight * 1.6 && scrollTop < screenHeight * 1.72) {
+        check.style.marginTop = '0px'
+
+        rent.style.opacity =
+          (scrollTop - screenHeight * 1.6) / (screenHeight * 0.1)
+        rent.style.marginTop = `${
+          (10 * (screenHeight * 0.1)) / (scrollTop - screenHeight * 1.6)
+        }px`
+      }
+      if (scrollTop < screenHeight * 1.6) {
+        rent.style.opacity = 0
+        rent.style.marginTop = '100px'
+      }
+
+      //aiwa
+      if (scrollTop > screenHeight * 1.7 && scrollTop < screenHeight * 1.82) {
+        rent.style.marginTop = '0px'
+
+        aiwa.style.opacity =
+          (scrollTop - screenHeight * 1.7) / (screenHeight * 0.1)
+        aiwa.style.marginTop = `${
+          (10 * (screenHeight * 0.1)) / (scrollTop - screenHeight * 1.6)
+        }px`
+      }
+      if (scrollTop < screenHeight * 1.7) {
+        aiwa.style.opacity = 0
+        aiwa.style.marginTop = '100px'
+      }
+
+      if (scrollTop > screenHeight * 1.8) {
+        aiwa.style.marginTop = '0px'
       }
     }
     if (scrollTop < screenHeight || scrollTop > screenHeight * 5) {

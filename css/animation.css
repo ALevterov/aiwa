@@ -1,0 +1,71 @@
+:root {
+  --index: calc(1vh + 1vw);
+}
+.parallax_container {
+  height: 400vh;
+}
+.car {
+  position: relative;
+  height: 100vh;
+  /* background: url(../image/kaif/фон_авто.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+  /* zoom: 100% */
+  transition: 0.3s;
+}
+.car.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.car__rolls {
+  width: calc(var(--index) * 24);
+  width: calc(var(--index) * 24);
+  /* transform: calc(50%); */
+  transition: 0.3s all;
+  position: absolute;
+  left: calc(50% - var(--index) * 12);
+  bottom: calc(var(--index) * -1);
+  z-index: 99999;
+  /* display: none; */
+}
+/* .car:hover {
+  zoom: 1.23;
+} */
+.bg-home {
+  display: none;
+  background-image: linear-gradient(
+    to top,
+    rgb(13, 13, 13),
+    rgba(0, 0, 0, 0.62),
+    rgba(0, 0, 0, 0.62)
+  );
+  /* url(../image/header/fon.jpg) */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 0px;
+  height: 1290px;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 1650px) {
+  .bg-home {
+    height: 909.62px;
+  }
+}
+@media (max-width: 1024px) {
+  .bg-home {
+    background-image: linear-gradient(
+        to top,
+        rgb(13, 13, 13),
+        rgba(0, 0, 0, 0.62),
+        rgba(0, 0, 0, 0.62)
+      ),
+      url(../image/header/mobile.png);
+    background-position-y: center;
+  }
+}

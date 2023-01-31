@@ -2,7 +2,7 @@
   --index: calc(1vh + 1vw);
 }
 .parallax_container {
-  height: 250vh;
+  height: 280vh;
 }
 .car {
   position: relative;
@@ -125,6 +125,8 @@
   transition: all 0.3s ease;
   opacity: 0;
   will-change: opacity;
+
+  margin-left: 100px;
 }
 .visible {
   opacity: 1;
@@ -149,9 +151,12 @@
 }
 
 @media (max-width: 1650px) {
-  /* .bg-home {
-    height: 909.62px;
-  } */
+  .main__btn {
+    margin-left: 0;
+  }
+  .main__logo__position {
+    top: 180px;
+  }
 }
 @media (max-width: 1024px) {
   .bg-home {

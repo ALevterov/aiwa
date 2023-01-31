@@ -11,7 +11,17 @@ let aiwa = document.getElementById('aiwa')
 
 let mainLine = document.querySelector('.main__line')
 
-console.log(parallaxContainer)
+let header = document.querySelector('header')
+document.body.addEventListener('click', e => {
+  console.log(e.target)
+})
+let hideParallaxBtns = document.querySelectorAll('.hide-parallax')
+
+hideParallaxBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    parallaxContainer.style.opacity = 0
+  })
+})
 
 // console.log(window.innerWidth)
 if (window.innerWidth >= 1024) {
@@ -72,7 +82,7 @@ if (window.innerWidth >= 1024) {
 
       // check
       if (scrollTop > screenHeight * 1.5 && scrollTop < screenHeight * 1.72) {
-        bgHome.style.opacity = 1
+        bgHome.style.opacity = 0.999
 
         check.style.opacity =
           (scrollTop - screenHeight * 1.5) / (screenHeight * 0.2)
@@ -154,21 +164,21 @@ if (window.innerWidth >= 1024) {
       if (scrollTop > screenHeight * 2.4) {
         mainBtn.style.opacity = 1
       }
-      if (scrollTop < screenHeight * 2.5) {
-        parallaxContainer.style.opacity = 1
+      if (scrollTop < screenHeight * 2.8) {
+        parallaxContainer.style.opacity = 0.999
       }
-      if (scrollTop > screenHeight * 2.5 && scrollTop < screenHeight * 3.5) {
+      if (scrollTop > screenHeight * 2.8 && scrollTop < screenHeight * 3.8) {
         parallaxContainer.style.opacity = `${Math.pow(
-          screenHeight / (scrollTop - screenHeight * 1.5),
+          screenHeight / (scrollTop - screenHeight * 1.8),
           8
         )}`
       }
 
-      if (scrollTop > screenHeight * 3.5) {
+      if (scrollTop > screenHeight * 3.8) {
         parallaxContainer.style.opacity = 0
       }
 
-      if (scrollTop < screenHeight * 2.5) {
+      if (scrollTop < screenHeight * 2.8) {
         scrollObject.style.position = 'fixed'
         bgHome.style.position = 'fixed'
         scrollObject.style.top = 0

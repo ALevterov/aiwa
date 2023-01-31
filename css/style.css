@@ -674,6 +674,8 @@ body {
   background: rgb(13, 13, 13);
   overflow-x: hidden;
   scroll-behavior: smooth;
+
+  scroll-behavior: smooth;
 }
 
 section {
@@ -920,6 +922,7 @@ header {
   padding: 52px 0px;
   position: absolute;
   width: 100%;
+  z-index: 9999;
 }
 
 .container {

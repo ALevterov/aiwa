@@ -664,9 +664,9 @@ article {
   height: 250px;
   position: absolute;
   filter: blur(1em);
-  bottom: -130px;
+  top: -130px;
   left: -40px;
-  z-index: 999;
+  z-index: 1;
 }
 
 body {

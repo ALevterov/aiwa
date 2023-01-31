@@ -2854,12 +2854,13 @@ footer {
 
   .main__btn {
     /* margin: 13% 0; */
-    top: 25%;
+    /* top: 25%; */
+    margin-top: 50px;
   }
 
   .main__btn > a {
-    width: 249.53px;
-    height: 62.9px;
+    /* width: 249.53px; */
+    /* height: 62.9px; */
     font-size: 16px;
     margin: 0px 15px;
   }
@@ -3345,7 +3346,7 @@ footer {
     left: 0;
     right: 0;
     text-align: center;
-    top: 300px;
+    /* top: 300px; */
   }
 
   .main__btn > a {

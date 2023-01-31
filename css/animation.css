@@ -126,7 +126,12 @@
   opacity: 0;
   will-change: opacity;
 }
-
+.visible {
+  opacity: 1;
+}
+.invisible {
+  opacity: 0;
+}
 .main__btn > a {
   color: #313149;
   padding: 19.741px 22.3213px;

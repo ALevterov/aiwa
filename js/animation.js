@@ -1,5 +1,6 @@
 let scrollObject = document.getElementById('car')
 let mainBtn = document.querySelector('.main__btn')
+let parallaxContainer = document.querySelector('.parallax_container')
 let main_logo = document.querySelector('.main__logo')
 let carRolls = document.querySelector('.car__rolls')
 let bgHome = document.querySelector('.bg-home')
@@ -10,7 +11,9 @@ let aiwa = document.getElementById('aiwa')
 
 let mainLine = document.querySelector('.main__line')
 
-console.log(window.innerWidth)
+console.log(parallaxContainer)
+
+// console.log(window.innerWidth)
 if (window.innerWidth >= 1024) {
   window.addEventListener('scroll', () => {
     const scrollTop = this.scrollY
@@ -151,27 +154,21 @@ if (window.innerWidth >= 1024) {
       if (scrollTop > screenHeight * 2.4) {
         mainBtn.style.opacity = 1
       }
+      if (scrollTop < screenHeight * 2.5) {
+        parallaxContainer.style.opacity = 1
+      }
+      if (scrollTop > screenHeight * 2.5 && scrollTop < screenHeight * 3.5) {
+        parallaxContainer.style.opacity = `${Math.pow(
+          screenHeight / (scrollTop - screenHeight * 1.5),
+          8
+        )}`
+      }
 
-      if (scrollTop > screenHeight * 2.5) {
-        // if (scrollObject.classList.contains('fixed')) {
-        //   scrollObject.classList.remove('fixed')
-        // }
-        // if (bgHome.classList.contains('fixed')) {
-        //   bgHome.classList.remove('fixed')
-        // }
-        scrollObject.style.top = `${screenHeight * 1.5}px`
-        bgHome.style.top = 0
-        scrollObject.style.position = 'absolute'
-        bgHome.style.position = 'absolute'
+      if (scrollTop > screenHeight * 3.5) {
+        parallaxContainer.style.opacity = 0
       }
 
       if (scrollTop < screenHeight * 2.5) {
-        // if (scrollObject.classList.contains('fixed')) {
-        //   scrollObject.classList.remove('fixed')
-        // }
-        // if (bgHome.classList.contains('fixed')) {
-        //   bgHome.classList.remove('fixed')
-        // }
         scrollObject.style.position = 'fixed'
         bgHome.style.position = 'fixed'
         scrollObject.style.top = 0

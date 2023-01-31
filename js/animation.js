@@ -68,13 +68,13 @@ if (window.innerWidth >= 1024) {
       }
 
       // check
-      if (scrollTop > screenHeight * 1.5 && scrollTop < screenHeight * 1.62) {
+      if (scrollTop > screenHeight * 1.5 && scrollTop < screenHeight * 1.72) {
         bgHome.style.opacity = 1
 
         check.style.opacity =
-          (scrollTop - screenHeight * 1.5) / (screenHeight * 0.1)
+          (scrollTop - screenHeight * 1.5) / (screenHeight * 0.2)
         check.style.marginTop = `${
-          (10 * (screenHeight * 0.1)) / (scrollTop - screenHeight * 1.5)
+          (10 * (screenHeight * 0.2)) / (scrollTop - screenHeight * 1.5)
         }px`
       }
       if (scrollTop < screenHeight * 1.5) {
@@ -83,89 +83,89 @@ if (window.innerWidth >= 1024) {
       }
 
       //rent
-      if (scrollTop > screenHeight * 1.6 && scrollTop < screenHeight * 1.72) {
+      if (scrollTop > screenHeight * 1.7 && scrollTop < screenHeight * 1.92) {
         check.style.marginTop = '0px'
         check.style.opacity = 1
 
         rent.style.opacity =
-          (scrollTop - screenHeight * 1.6) / (screenHeight * 0.1)
+          (scrollTop - screenHeight * 1.7) / (screenHeight * 0.2)
         rent.style.marginTop = `${
-          (10 * (screenHeight * 0.1)) / (scrollTop - screenHeight * 1.6)
+          (10 * (screenHeight * 0.2)) / (scrollTop - screenHeight * 1.7)
         }px`
       }
-      if (scrollTop < screenHeight * 1.6) {
+      if (scrollTop < screenHeight * 1.7) {
         rent.style.opacity = 0
         rent.style.marginTop = '100px'
       }
 
       //aiwa
-      if (scrollTop > screenHeight * 1.7 && scrollTop < screenHeight * 1.82) {
+      if (scrollTop > screenHeight * 1.9 && scrollTop < screenHeight * 2.12) {
         rent.style.marginTop = '0px'
         rent.style.opacity = 1
 
         aiwa.style.opacity =
-          (scrollTop - screenHeight * 1.7) / (screenHeight * 0.1)
+          (scrollTop - screenHeight * 1.9) / (screenHeight * 0.2)
         aiwa.style.marginTop = `${
-          (10 * (screenHeight * 0.1)) / (scrollTop - screenHeight * 1.7)
+          (10 * (screenHeight * 0.2)) / (scrollTop - screenHeight * 1.9)
         }px`
       }
-      if (scrollTop < screenHeight * 1.7) {
+      if (scrollTop < screenHeight * 1.9) {
         aiwa.style.opacity = 0
         aiwa.style.marginTop = '100px'
       }
 
-      if (scrollTop > screenHeight * 1.8) {
+      if (scrollTop > screenHeight * 2.1) {
         aiwa.style.marginTop = '0px'
         aiwa.style.opacity = 1
       }
 
-      if (scrollTop > screenHeight * 1.8 && scrollTop < screenHeight * 1.92) {
+      if (scrollTop > screenHeight * 2.1 && scrollTop < screenHeight * 2.32) {
         mainLine.style.transform = `translateY${
-          (10 * (screenHeight * 0.1)) / (scrollTop - screenHeight * 1.8)
+          (10 * (screenHeight * 0.2)) / (scrollTop - screenHeight * 2.1)
         }px`
         aiwa.style.opacity =
-          (scrollTop - screenHeight * 1.8) / (screenHeight * 0.1)
+          (scrollTop - screenHeight * 2.1) / (screenHeight * 0.2)
       }
 
-      if (scrollTop < screenHeight * 1.8) {
+      if (scrollTop < screenHeight * 2.3) {
         mainLine.style.transform = `translateY(100px)`
         mainLine.style.opacity = 0
       }
 
-      if (scrollTop > screenHeight * 1.9) {
+      if (scrollTop > screenHeight * 2.3) {
         mainLine.style.transform = `translateY(0px)`
         mainLine.style.opacity = 1
       }
-      if (scrollTop > screenHeight * 1.9) {
+      if (scrollTop > screenHeight * 2.3) {
         mainLine.style.transform = `translateY(0px)`
         mainLine.style.opacity = 1
       }
 
-      if (scrollTop > screenHeight * 1.9 && scrollTop < screenHeight * 2.02) {
+      if (scrollTop > screenHeight * 2.3 && scrollTop < screenHeight * 2.52) {
         mainBtn.style.opacity =
-          (scrollTop - screenHeight * 1.9) / (screenHeight * 0.1)
+          (scrollTop - screenHeight * 2.3) / (screenHeight * 0.2)
       }
-      if (scrollTop < screenHeight * 1.9) {
+      if (scrollTop < screenHeight * 2.3) {
         mainBtn.style.opacity = 0
       }
-      if (scrollTop > screenHeight * 2) {
+      if (scrollTop > screenHeight * 2.4) {
         mainBtn.style.opacity = 1
       }
 
-      if (scrollTop > screenHeight * 2.1) {
+      if (scrollTop > screenHeight * 2.5) {
         // if (scrollObject.classList.contains('fixed')) {
         //   scrollObject.classList.remove('fixed')
         // }
         // if (bgHome.classList.contains('fixed')) {
         //   bgHome.classList.remove('fixed')
         // }
-        scrollObject.style.top = `${screenHeight * 1.1}px`
+        scrollObject.style.top = `${screenHeight * 1.5}px`
         bgHome.style.top = 0
         scrollObject.style.position = 'absolute'
         bgHome.style.position = 'absolute'
       }
 
-      if (scrollTop < screenHeight * 2.1) {
+      if (scrollTop < screenHeight * 2.5) {
         // if (scrollObject.classList.contains('fixed')) {
         //   scrollObject.classList.remove('fixed')
         // }

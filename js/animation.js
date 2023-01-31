@@ -28,7 +28,7 @@ if (window.innerWidth >= 1024) {
 
     const scale = scrollTop / screenHeight
 
-    document.querySelector('title').innerHTML = scrollTop + ' ' + screenHeight
+    // document.querySelector('title').innerHTML = scrollTop + ' ' + screenHeight
 
     if (scrollTop < screenHeight) {
       if (scrollObject.classList.contains('fixed')) {

@@ -3666,7 +3666,7 @@
           на бронирование автомобиля
         </h4>
 
-        <!-- <?php
+        <?php
 						define('TELEGRAM_TOKEN', '6197786842:AAGx_eri4CEnpePmkAhT1VGSr8oSePBF_78');
 						
 						// сюда нужно вписать ваш внутренний айдишник
@@ -3721,7 +3721,7 @@
 								message_to_telegram($message);
                 echo "<style> .form__block__thx { display: block; } .btn__thx {display: none;} </style>";
             }
-            ?> -->
+            ?>
         <!-- <style>
           .form__block__thx {
             display: block;

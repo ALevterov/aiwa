@@ -1,4 +1,5 @@
 @import url('animation.css');
+@import url('mobile-first-section.css');
 * {
   padding: 0;
   margin: 0;
@@ -1518,6 +1519,7 @@ header {
 
 .calc__select {
   display: flex;
+  justify-content: space-between;
   position: absolute;
   right: 0px;
   bottom: 15px;
@@ -1862,7 +1864,9 @@ option {
   z-index: -2;
   bottom: 4px;
 }
-
+.select__rent__image {
+  position: static;
+}
 .rent__select:hover .select__rent__image {
   transform: rotate(0deg);
 }
@@ -1991,7 +1995,12 @@ input:focus {
   text-align: center;
   display: none;
 }
-
+.form__thx.form__block__thx {
+  display: none;
+}
+.btn__thx {
+  display: block !important;
+}
 .form__thx > h3 {
   font-style: normal;
   font-weight: 400;

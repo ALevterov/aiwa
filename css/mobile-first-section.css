@@ -1,0 +1,86 @@
+.mobile_first_section {
+  height: auto;
+  width: 100%;
+  margin-bottom: calc(1vw * 15);
+}
+.m_fs_bg {
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-size: auto;
+}
+.mobile-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(1vw * 20);
+}
+.mobile-img > img {
+  width: 90%;
+  height: auto;
+}
+@media screen and (min-width: 1024px) {
+  .mobile_first_section {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* .bg-home {
+    background: rgba(0, 0, 0, 0.72);
+  } */
+  div.main__btn > a {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 24px;
+    font-weight: 400;
+    font-size: 13.7488px;
+    line-height: 31px;
+
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.31122px);
+
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 5.29856px;
+  }
+  .bg-home {
+    opacity: 1;
+    height: auto;
+  }
+  #check,
+  #rent,
+  #aiwa {
+    opacity: 1;
+  }
+  .main__logo > span {
+    font-size: calc(1vw * 8);
+    line-height: 200%;
+  }
+  .main__logo {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main__logo__position {
+    display: block;
+    margin-top: 80px;
+    position: static;
+  }
+  header {
+    position: static !important;
+    padding-top: 53px !important;
+  }
+  div.main__btn {
+    position: static;
+    margin-top: 50px;
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mobile-img {
+    margin-top: calc(1vw * 32);
+  }
+}

@@ -178,12 +178,12 @@
 @media (max-width: 1024px) {
   .bg-home {
     background-image: linear-gradient(
-        to top,
-        rgb(13, 13, 13),
-        rgba(0, 0, 0, 0.62),
-        rgba(0, 0, 0, 0.62)
-      ),
-      url(../image/header/mobile.png);
-    background-position-y: center;
+      to top,
+      rgb(13, 13, 13),
+      rgba(0, 0, 0, 0.62),
+      rgba(0, 0, 0, 0.62)
+    );
+    /* url(../image/header/mobile.png);
+    background-position-y: center; */
   }
 }

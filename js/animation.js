@@ -17,14 +17,13 @@ document.body.addEventListener('click', e => {
 })
 let hideParallaxBtns = document.querySelectorAll('.hide-parallax')
 
-hideParallaxBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    parallaxContainer.style.opacity = 0
-  })
-})
-
 // console.log(window.innerWidth)
 if (window.innerWidth >= 1024) {
+  hideParallaxBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      parallaxContainer.style.opacity = 0
+    })
+  })
   window.addEventListener('scroll', () => {
     const scrollTop = this.scrollY
     const screenHeight = document.documentElement.clientHeight

@@ -83,4 +83,30 @@
   .mobile-img {
     margin-top: calc(1vw * 32);
   }
+  .main__logo > span {
+    font-weight: 500;
+    /* font-size: 30px;
+    line-height: 62px; */
+
+    /* or 207% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+
+    color: #edc89e;
+    background: transparent;
+
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+  }
+}
+@media screen and (max-width: 540px) {
+  .main__logo > span {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 62px;
+  }
 }

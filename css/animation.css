@@ -75,6 +75,38 @@
 .main__logo {
   position: relative;
   text-align: center;
+  /* font-style: normal;
+  font-weight: 700;
+  font-size: 113.218px;
+  line-height: 133px;
+  background: radial-gradient(
+      24.8% 120.54% at 67.74% 108.14%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #edc89e;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; */
+  z-index: 10;
+  /* letter-spacing: 0.3em;
+  text-transform: uppercase; */
+
+  opacity: 1;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.main__logo > span {
+  display: inline-block;
+  margin-top: 100px;
+  opacity: 0;
+
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+
   font-style: normal;
   font-weight: 700;
   font-size: 113.218px;
@@ -88,21 +120,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  z-index: 10;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-
-  opacity: 1;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.main__logo > span {
-  display: inline-block;
-  margin-top: 100px;
-  opacity: 0;
 }
 
 .main__line {

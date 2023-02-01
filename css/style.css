@@ -892,7 +892,9 @@ nav ul.main1 li {
 nav ul.main1 li:last-of-type {
   margin-bottom: 0px;
 }
-
+.change_text_calc {
+  z-index: 1;
+}
 nav ul.main1 li a {
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
@@ -2984,10 +2986,10 @@ footer {
     font-size: 15px;
   }
 
-  .calc__image {
+  /* .calc__image {
     width: 276px;
-    height: 95px;
-  }
+    height: 195px;
+  } */
 
   .calc__begin__date,
   .calc__end__date {
@@ -3520,7 +3522,6 @@ footer {
     margin-left: 10px;
   }
   /* end cars */
-
   /* calc */
   .calc__cars__mobile {
     position: absolute;

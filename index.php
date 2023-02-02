@@ -3666,30 +3666,30 @@
           на бронирование автомобиля
         </h4>
 
-        <!-- <?php
-						define('TELEGRAM_TOKEN', '6197786842:AAGx_eri4CEnpePmkAhT1VGSr8oSePBF_78');
+        <?php
+						// define('TELEGRAM_TOKEN', '6197786842:AAGx_eri4CEnpePmkAhT1VGSr8oSePBF_78');
 						
-						// сюда нужно вписать ваш внутренний айдишник
-						define('TELEGRAM_CHATID', '99999999');
+						// // сюда нужно вписать ваш внутренний айдишник
+						// define('TELEGRAM_CHATID', '99999999');
 						
-						function message_to_telegram($text)
-						{
-								$ch = curl_init();
-								curl_setopt_array(
-										$ch,
-										array(
-												CURLOPT_URL => 'https://api.telegram.org/bot' . TELEGRAM_TOKEN . '/sendMessage',
-												CURLOPT_POST => TRUE,
-												CURLOPT_RETURNTRANSFER => TRUE,
-												CURLOPT_TIMEOUT => 10,
-												CURLOPT_POSTFIELDS => array(
-														'chat_id' => TELEGRAM_CHATID,
-														'text' => $text,
-												),
-										)
-								);
-								curl_exec($ch);
-						}
+						// function message_to_telegram($text)
+						// {
+						// 		$ch = curl_init();
+						// 		curl_setopt_array(
+						// 				$ch,
+						// 				array(
+						// 						CURLOPT_URL => 'https://api.telegram.org/bot' . TELEGRAM_TOKEN . '/sendMessage',
+						// 						CURLOPT_POST => TRUE,
+						// 						CURLOPT_RETURNTRANSFER => TRUE,
+						// 						CURLOPT_TIMEOUT => 10,
+						// 						CURLOPT_POSTFIELDS => array(
+						// 								'chat_id' => TELEGRAM_CHATID,
+						// 								'text' => $text,
+						// 						),
+						// 				)
+						// 		);
+						// 		curl_exec($ch);
+						// }
 
             $email_admin = "sm@aiwa.rent";
 
@@ -3721,7 +3721,7 @@
 								message_to_telegram($message);
                 echo "<style> .form__block__thx { display: block; } .btn__thx {display: none;} </style>";
             }
-            ?> -->
+            ?>
         <!-- <style>
           .form__block__thx {
             display: block;

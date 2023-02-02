@@ -3669,7 +3669,7 @@
 
 						define('TELEGRAM_TOKEN', '6197786842:AAGx_eri4CEnpePmkAhT1VGSr8oSePBF_78');
             
-            // сюда нужно вписать ваш внутренний айдишник
+          
             define('TELEGRAM_CHATID', '99999999');
             
             function message_to_telegram($text)

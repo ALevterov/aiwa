@@ -3695,7 +3695,7 @@ if(isset($_POST['phone__rent']) and isset($_POST['email__rent']) and isset($_POS
 				</html>
 		";
 		mail($email_admin, "Заказ", $message, $headers);
-		echo "<style> .form__block__thx { display: block; } .btn__thx {display: none;} </style>";
+		echo "<style> .form__thx.form__block__thx { display: block; } div.btn__thx {display: none;} </style>";
 }
 ?>
 					

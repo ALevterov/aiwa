@@ -1998,8 +1998,8 @@ input:focus {
 .form__thx.form__block__thx {
   display: none;
 }
-.btn__thx {
-  display: block !important;
+div.btn__thx {
+  display: block;
 }
 .form__thx > h3 {
   font-style: normal;

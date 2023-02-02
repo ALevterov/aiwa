@@ -3665,71 +3665,40 @@
           оставить заявку<br class="mobile__transfer" />
           на бронирование автомобиля
         </h4>
+				sm@aiwa.rent
+				<?php
 
-        <?php
-						// define('TELEGRAM_TOKEN', '6197786842:AAGx_eri4CEnpePmkAhT1VGSr8oSePBF_78');
-						
-						// // сюда нужно вписать ваш внутренний айдишник
-						// define('TELEGRAM_CHATID', '99999999');
-						
-						// function message_to_telegram($text)
-						// {
-						// 		$ch = curl_init();
-						// 		curl_setopt_array(
-						// 				$ch,
-						// 				array(
-						// 						CURLOPT_URL => 'https://api.telegram.org/bot' . TELEGRAM_TOKEN . '/sendMessage',
-						// 						CURLOPT_POST => TRUE,
-						// 						CURLOPT_RETURNTRANSFER => TRUE,
-						// 						CURLOPT_TIMEOUT => 10,
-						// 						CURLOPT_POSTFIELDS => array(
-						// 								'chat_id' => TELEGRAM_CHATID,
-						// 								'text' => $text,
-						// 						),
-						// 				)
-						// 		);
-						// 		curl_exec($ch);
-						// }
+$email_admin = "";
 
-            $email_admin = "sm@aiwa.rent";
+if(isset($_POST['phone__rent']) and isset($_POST['email__rent']) and isset($_POST['name__rent']) and isset($_POST['comm__rent'])) {
+		$email = $_POST['phone__rent'];
+		$phone = $_POST['email__rent'];
+		$name = $_POST['name__rent'];
+		$comm = $_POST['comm__rent'];
 
-            if(isset($_POST['phone__rent']) and isset($_POST['email__rent']) and isset($_POST['name__rent']) and isset($_POST['comm__rent'])) {
-                $phone = $_POST['phone__rent'];
-                $email = $_POST['email__rent'];
-                $name = $_POST['name__rent'];
-                $comm = $_POST['comm__rent'];
+		$headers  = "MIME-Version: 1.0\r\n";
+		$headers .= "Content-type: text/html; charset=utf-8\r\n";
+		$headers .= "To: <$email>\r\n";
+		$headers .= "From: <mail@example.com>\r\n";
 
-                $headers  = "MIME-Version: 1.0\r\n";
-                $headers .= "Content-type: text/html; charset=utf-8\r\n";
-                $headers .= "To: <$email>\r\n";
-                $headers .= "From: <mail@example.com>\r\n";
-
-                $message = "
-                    <html>
-                    <head>
-                        <title>Aiwa.ru</title>
-                    </head>
-                    <body>
-                        <p>E-mail: $email</p>
-                        <p>Телефон: $phone</p>
-                        <p>Имя: $name</p>
-                        <p>Комментарий: $comm</p>
-                    </body>
-                    </html>
-                ";
-                mail($email_admin, "Заказ", $message, $headers);
-								message_to_telegram($message);
-                echo "<style> .form__block__thx { display: block; } .btn__thx {display: none;} </style>";
-            }
-            ?>
-        <!-- <style>
-          .form__block__thx {
-            display: block;
-          }
-          .btn__thx {
-            display: none;
-          }
-        </style> -->
+		$message = "
+				<html>
+				<head>
+						<title>Aiwa.ru</title>
+				</head>
+				<body>
+						<p>E-mail: $email</p>
+						<p>Телефон: $phone</p>
+						<p>Имя: $name</p>
+						<p>Комментарий: $comm</p>
+				</body>
+				</html>
+		";
+		mail($email_admin, "Заказ", $message, $headers);
+		echo "<style> .form__block__thx { display: block; } .btn__thx {display: none;} </style>";
+}
+?>
+					
         <form class="rent__inner" method="POST" action="/#rent">
           <div class="rent__cars">
             <h3 class="change_text">Rolls Royce Cullinan</h3>

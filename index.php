@@ -3665,14 +3665,36 @@
           оставить заявку<br class="mobile__transfer" />
           на бронирование автомобиля
         </h4>
-				sm@aiwa.rent
 				<?php
 
-$email_admin = "";
+						define('TELEGRAM_TOKEN', '6197786842:AAGx_eri4CEnpePmkAhT1VGSr8oSePBF_78');
+            
+            // сюда нужно вписать ваш внутренний айдишник
+            define('TELEGRAM_CHATID', '99999999');
+            
+            function message_to_telegram($text)
+            {
+                $ch = curl_init();
+                curl_setopt_array(
+                    $ch,
+                    array(
+                        CURLOPT_URL => 'https://api.telegram.org/bot' . TELEGRAM_TOKEN . '/sendMessage',
+                        CURLOPT_POST => TRUE,
+                        CURLOPT_RETURNTRANSFER => TRUE,
+                        CURLOPT_TIMEOUT => 10,
+                        CURLOPT_POSTFIELDS => array(
+                            'chat_id' => TELEGRAM_CHATID,
+                            'text' => $text,
+                        ),
+                    )
+                );
+                curl_exec($ch);
+            }
+$email_admin = "sm@aiwa.rent";
 
 if(isset($_POST['phone__rent']) and isset($_POST['email__rent']) and isset($_POST['name__rent']) and isset($_POST['comm__rent'])) {
-		$email = $_POST['phone__rent'];
-		$phone = $_POST['email__rent'];
+		$email = $_POST['email__rent'];
+		$phone = $_POST['phone__rent'];
 		$name = $_POST['name__rent'];
 		$comm = $_POST['comm__rent'];
 
@@ -3695,6 +3717,7 @@ if(isset($_POST['phone__rent']) and isset($_POST['email__rent']) and isset($_POS
 				</html>
 		";
 		mail($email_admin, "Заказ", $message, $headers);
+		message_to_telegram($message)
 		echo "<style> .form__thx.form__block__thx { display: block; } button.btn__thx {display: none;} </style>";
 }
 ?>

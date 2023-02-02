@@ -1998,7 +1998,7 @@ input:focus {
 .form__thx.form__block__thx {
   display: none;
 }
-div.btn__thx {
+button.btn__thx {
   display: block;
 }
 .form__thx > h3 {

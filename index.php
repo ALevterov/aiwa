@@ -3669,7 +3669,7 @@
 
 						define('TELEGRAM_TOKEN', '6197786842:AAGx_eri4CEnpePmkAhT1VGSr8oSePBF_78');
             
-          
+            // сюда нужно вписать ваш внутренний айдишник
             define('TELEGRAM_CHATID', '99999999');
             
             function message_to_telegram($text)
@@ -3717,7 +3717,7 @@ if(isset($_POST['phone__rent']) and isset($_POST['email__rent']) and isset($_POS
 				</html>
 		";
 		mail($email_admin, "Заказ", $message, $headers);
-		message_to_telegram($message)
+		// message_to_telegram($message)
 		echo "<style> .form__thx.form__block__thx { display: block; } button.btn__thx {display: none;} </style>";
 }
 ?>

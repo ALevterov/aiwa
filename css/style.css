@@ -1482,6 +1482,7 @@ header {
   display: flex;
   justify-content: space-between;
   z-index: 10;
+  gap: 20px;
 }
 
 .calc__cars {
@@ -1490,6 +1491,7 @@ header {
   background: #000000;
   border-radius: 10px;
   position: relative;
+  overflow: hidden;
 }
 
 .calc__shadow__pc {
@@ -1512,23 +1514,29 @@ header {
   top: 34px;
   left: 34px;
 }
-
+#cars_picker {
+  font-weight: 300;
+  font-size: 11px;
+}
 .calc__image {
   position: absolute;
-  top: 0;
-  right: 80px;
-  width: 247px;
-  height: 167px;
+  top: -10px;
+  right: 10%;
+  width: 267px;
+  height: 190px;
 }
 
 .calc__select {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  right: 0px;
+  right: 30px;
+  /* left: 34px; */
   bottom: 15px;
-  padding-left: 130px;
-  padding-right: 100px;
+  /* padding-left: 130px;
+  padding-right: 100px;  */
+  align-self: flex-start;
+  cursor: pointer;
 }
 
 .calc__select > h4 {
@@ -1541,15 +1549,16 @@ header {
 }
 
 .calc__select > select {
-  width: 243px;
-  height: 15px;
+  /* width: 243px; */
+  /* height: 15px; */
   border: 0px;
   background: rgba(0, 0, 0, 0.1);
   color: #fff;
   appearance: none;
-  margin-right: 15px;
+  /* margin-right: 15px; */
   outline: none;
   z-index: 2;
+  padding-right: 60px;
 }
 
 option {
@@ -1561,16 +1570,20 @@ option {
 .calc__select > img {
   transform: rotate(-90deg);
   transition: 0.3s;
-  position: absolute;
-  right: 140px;
+  /* position: absolute; */
+  /* right: 140px; */
   z-index: 1;
   bottom: 4px;
+  margin-left: -20px;
 }
 
 .calc__select:hover .select__image {
   transform: rotate(0deg);
 }
-
+.select__image,
+#cars_picker {
+  cursor: pointer;
+}
 .calc__date__inner {
   display: flex;
   justify-content: space-between;
@@ -1734,7 +1747,7 @@ option {
   flex-wrap: nowrap;
 }
 .calc__full > h3 > span {
-  margin-left: 6px;
+  margin-right: 6px;
 }
 .calc__full > div > h4 {
   font-style: normal;
@@ -1757,7 +1770,30 @@ option {
   text-transform: uppercase;
   color: #edc89e;
 }
-
+.calc__full > div > h4 {
+  display: flex;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+  .calc__inner {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .calc__price {
+    margin-top: 0;
+    padding: 30px;
+  }
+  .calc__price > h3 {
+    position: static;
+  }
+  .calc__full {
+    position: static;
+  }
+  .calc__price > h3 {
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+}
 /* end calc */
 
 /* rent */
@@ -2383,7 +2419,45 @@ button.btn__thx {
 .cond__cross {
   transform: rotate(-90deg);
 }
-
+@media screen and (max-width: 1024px) {
+  .calc__select > select {
+    padding-right: 30px;
+  }
+  .calc__select > img {
+    width: 12px;
+    height: 12px;
+  }
+  .calc__end__date {
+    display: flex;
+    justify-content: center;
+  }
+  .calc__full {
+    position: static;
+  }
+  .calc__price {
+    height: auto;
+    padding: 20px 30px;
+  }
+  .calc__price > h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    line-height: normal;
+  }
+  .calc__begin__date,
+  .calc__end__date {
+    justify-content: flex-start;
+    padding: 20px;
+  }
+  .date__select {
+    padding-left: 0;
+    left: 12px;
+  }
+  .calc__begin__date > h3,
+  .calc__end__date > h3 {
+    height: auto;
+    line-height: normal;
+  }
+}
 /* end cond */
 
 /* info */
@@ -3066,7 +3140,7 @@ footer {
 
   .calc__price {
     width: 386.48px;
-    height: 134.34px;
+    height: auto;
   }
 
   .calc__begin__date > h3,
@@ -3627,14 +3701,14 @@ footer {
   }
 
   .calc__image {
-    width: 157px;
-    height: 127px;
+    width: 187px;
+    height: 157px;
     right: 55px;
   }
 
   .calc__select > select {
     font-size: 7.20238px;
-    width: 105px;
+    /* width: 105px; */
   }
 
   .calc__select > img {
@@ -3654,7 +3728,7 @@ footer {
   .calc__price {
     margin: 10px 0px;
     width: 330px;
-    height: 100.23px;
+    /* height: 100.23px; */
   }
 
   .calc__begin__date > h3,
@@ -3764,7 +3838,7 @@ footer {
   }
 
   .date__select {
-    left: 5px;
+    /* left: 5px; */
     bottom: 30px;
   }
 

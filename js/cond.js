@@ -9,7 +9,11 @@ let cond_blur = document.querySelectorAll('.cond__blur')
 let cond_text_open = document.querySelectorAll('.cond__text__open')
 
 for (let index = 0; index < cond_item.length; index++) {
-  cond_btn[index].addEventListener('click', () => {
+  cond_btn[index].addEventListener('click', e => {
+    cond_btn[index].classList.toggle('static')
+    cond_btn[index].classList.toggle('dark')
+    cond_item[index].classList.toggle('dark')
+    console.log(e.target)
     if (cond_item[index].classList.contains('cond__down')) {
       cond_item[index].classList.remove('cond__down')
       cond_image[index].classList.remove('cond__cross')

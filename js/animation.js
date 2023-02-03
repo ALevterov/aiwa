@@ -12,12 +12,8 @@ let aiwa = document.getElementById('aiwa')
 let mainLine = document.querySelector('.main__line')
 
 let header = document.querySelector('header')
-document.body.addEventListener('click', e => {
-  console.log(e.target)
-})
 let hideParallaxBtns = document.querySelectorAll('.hide-parallax')
 
-// console.log(window.innerWidth)
 if (window.innerWidth >= 1024) {
   hideParallaxBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -195,7 +191,6 @@ if (window.innerWidth >= 1024) {
     //   bgHome.classList.remove('fixed')
     //   carRolls.style.transform = 'none'
     // }
-    console.log(screenHeight)
     document.body.style.cssText = `--scrollTop: ${scrollTop}`
 
     // if(window.pageYOffset <= 1920 && window.pageYOffset >= 1460) {

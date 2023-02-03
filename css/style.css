@@ -1345,7 +1345,9 @@ header {
   text-align: center;
   cursor: pointer;
 }
-
+.hasDatepicker {
+  margin-right: 16px;
+}
 .cars__item__circle {
   bottom: -1201px;
 }
@@ -1580,6 +1582,8 @@ option {
   background: #000000;
   border-radius: 10px;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .calc__begin__date > h3 {
@@ -1598,7 +1602,10 @@ option {
   display: flex;
   align-items: center;
   position: absolute;
-  left: 30px;
+  /* left: 30px; */
+  left: 0;
+  padding: 0 0 0 30px;
+  justify-content: space-between;
   bottom: 35px;
   cursor: pointer;
 }
@@ -1647,6 +1654,8 @@ option {
   background: #000000;
   border-radius: 10px;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .calc__deposit > h3 {
@@ -1657,7 +1666,7 @@ option {
   text-transform: uppercase;
   color: #ffffff;
   position: absolute;
-  left: 30px;
+  /* left: 30px; */
   top: 15px;
 }
 
@@ -1683,6 +1692,8 @@ option {
   background: #000000;
   border-radius: 10px;
   position: relative;
+
+  padding: 0 30px;
 }
 
 .calc__price > h3 {
@@ -1703,11 +1714,12 @@ option {
 
 .calc__full {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   position: absolute;
-  width: 100%;
+  width: calc(100% - 60px);
   bottom: 30px;
+  /* padding: 0 30px; */
 }
 
 .calc__full > div > h3 {
@@ -1717,13 +1729,20 @@ option {
   text-transform: uppercase;
   color: #edc89e;
 }
-
+.calc__full > h3 {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.calc__full > h3 > span {
+  margin-left: 6px;
+}
 .calc__full > div > h4 {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;
   color: #3d3d3d;
+  margin-top: 12px;
 }
 
 .calc__full > span {
@@ -1734,7 +1753,7 @@ option {
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
-  line-height: 40px;
+  /* line-height: 40px; */
   text-transform: uppercase;
   color: #edc89e;
 }
@@ -2299,7 +2318,9 @@ button.btn__thx {
 .cond__item:hover {
   background: #252525;
 }
-
+.cond__item.dark:hover {
+  background: #181818;
+}
 .cond__blur {
   filter: blur(0.1em);
   opacity: 0.3;
@@ -2328,6 +2349,14 @@ button.btn__thx {
   width: 100%;
   cursor: pointer;
   z-index: 99;
+}
+.cond__btn.static {
+  position: static;
+  border-radius: 12px;
+  padding-bottom: 12px;
+}
+.cond__btn.dark {
+  background: #181818;
 }
 
 .cond__btn > h4 {
@@ -3166,7 +3195,9 @@ footer {
     width: 431.49px;
     height: 160.83px;
   }
-
+  /* .cond__item.dark:hover {
+    background-color: #181818;
+  } */
   .cond__down {
     /* height: 1281px; */
   }
@@ -3630,6 +3661,8 @@ footer {
   .calc__deposit > h3,
   .calc__end__date > h3,
   .calc__price > h3 {
+    position: static;
+    line-height: auto;
     font-size: 9.0733px;
     left: 15px;
   }
@@ -3648,7 +3681,7 @@ footer {
   }
 
   .calc__full {
-    margin: 0px 5px;
+    /* margin: 0px 5px; */
     align-items: flex-start;
   }
 
@@ -3672,6 +3705,8 @@ footer {
 
   .dep__mobile {
     display: block;
+    margin-left: 6px;
+    margin-right: 6px;
   }
   /* end calc */
 
@@ -3884,9 +3919,9 @@ footer {
     margin: 15px auto;
   }
 
-  .cond__down {
+  /* .cond__down {
     height: 1286px;
-  }
+  } */
 
   .cond__text > ul > li {
     width: 273px;
@@ -4181,7 +4216,7 @@ footer {
 
   .cond__text__open {
     position: relative;
-    height: 0;
+    /* height: 0; */
   }
 
   .mobile__transfer {

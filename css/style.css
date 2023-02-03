@@ -786,7 +786,9 @@ section {
 .burger:hover {
   cursor: pointer;
 }
-
+.contact_info_links > a:first-child {
+  margin-left: 0;
+}
 nav {
   background-color: #2a2a2a;
   position: fixed;
@@ -2049,6 +2051,7 @@ button.btn__thx {
   justify-content: space-between;
   align-items: center;
   margin: 25px 0px;
+  gap: 16px;
 }
 
 .how__item {
@@ -2239,13 +2242,26 @@ button.btn__thx {
 .cond__inner {
   display: flex;
   justify-content: space-around;
+  gap: 20px;
+  /* flex-wrap: wrap; */
 }
-
+.cond__shadow {
+  max-width: 100%;
+}
+.values__inner {
+  gap: 20px;
+}
+.values__shadow {
+  max-width: 100%;
+}
+.values__item {
+  padding: 23px;
+}
 .cond__text__open {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   background-color: #181818;
-  height: 908px;
+  /* height: auto; */
   border-radius: 12px;
 }
 
@@ -2269,6 +2285,7 @@ button.btn__thx {
 }
 
 .cond__item > p {
+  position: relative;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -2440,7 +2457,8 @@ button.btn__thx {
   width: 386px;
   height: 205px;
   position: absolute;
-  bottom: -5px;
+  bottom: 0px;
+  left: 0;
   border-radius: 12px;
 }
 
@@ -2508,6 +2526,7 @@ button.btn__thx {
   width: 100%;
   cursor: pointer;
   z-index: 99;
+  left: 0;
 }
 
 .values__btn > h4 {
@@ -2840,8 +2859,8 @@ footer {
 .footer__inner > h3 {
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 125%;
   color: #949494;
 }
 /* end footer */
@@ -4139,8 +4158,7 @@ footer {
 
   .footer__inner > h3 {
     margin: 10px 0px;
-    font-size: 15.4697px;
-    line-height: 19px;
+    font-size: 14px;
   }
 
   .map__mobile {

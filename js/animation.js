@@ -177,10 +177,10 @@ if (window.innerWidth >= 1024) {
         parallaxContainer.style.opacity = 0
       }
       if (scrollTop > screenHeight * 4.2) {
-        parallaxContainer.style.display = 'none'
+        // parallaxContainer.style.display = 'none'
       }
       if (scrollTop < screenHeight * 4.2) {
-        parallaxContainer.style.display = 'block'
+        // parallaxContainer.style.display = 'block'
       }
       if (scrollTop < screenHeight * 2.8) {
         // parallaxContainer.style.display = 'block'

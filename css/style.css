@@ -2378,6 +2378,9 @@ button.btn__thx {
   padding-top: 50px;
   width: 808px;
 }
+.info__item:nth-child(2) > p:nth-child(2) {
+  margin-top: 45px;
+}
 
 .info__item > h3 {
   font-style: normal;
@@ -2824,6 +2827,8 @@ details {
 /* footer */
 footer {
   padding: 55px 0px;
+
+  margin-top: 40px;
 }
 
 .footer__inner {
@@ -4183,7 +4188,11 @@ footer {
     top: 354px;
   }
 }
-
+@media (max-width: 600px) {
+  footer {
+    margin-top: 20px;
+  }
+}
 @media (max-width: 450px) {
   .nav__booking {
     margin-right: 50px;

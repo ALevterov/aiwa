@@ -6,7 +6,7 @@ let carRolls = document.querySelector('.car__rolls')
 let bgHome = document.querySelector('.bg-home')
 
 let check = document.getElementById('check')
-let rent = document.getElementById('rent')
+let rent = document.getElementById('rent1')
 let aiwa = document.getElementById('aiwa')
 
 let mainLine = document.querySelector('.main__line')

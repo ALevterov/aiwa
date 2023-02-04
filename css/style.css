@@ -1316,7 +1316,8 @@ header {
 
 .cars__text {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 25px;
 }
 
 .cars__text > p {
@@ -1336,23 +1337,22 @@ header {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #edc89e;
-  margin: 0px 35px;
+  margin: 0px 25px;
 }
 
 .cars__specifications {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 30px 0px;
+  padding-left: 18px;
 }
+/* .cars__specifications:nth-child(7) {
+  padding-left: 10px;
+} */
 
 .cars__specifications > tbody > tr > td {
   padding: 7px 5px;
   color: #fff;
-  /* border: 1px solid #fff; */
-}
-
-.cars__image__add {
-  position: relative;
 }
 
 .item__circle {
@@ -3699,7 +3699,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 45px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
   }
 
   .cars__swipe > span {
@@ -4081,8 +4081,12 @@ footer {
   .info__inner__mobile {
     overflow: -moz-scrollbars-none;
   }
-
+  .info__inner__mobile > .info__item {
+    margin-left: 0 !important;
+  }
   .info__item {
+    padding-top: 20px;
+
     width: 330px;
     display: grid;
     justify-content: center;

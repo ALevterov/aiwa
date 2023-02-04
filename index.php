@@ -3701,7 +3701,7 @@
           оставить заявку<br class="mobile__transfer" />
           на бронирование автомобиля
         </h4>
-        <!-- <?php
+        <?php
 
 						define('TELEGRAM_TOKEN', '6197786842:AAGx_eri4CEnpePmkAhT1VGSr8oSePBF_78');
             
@@ -3726,7 +3726,7 @@
                 );
                 curl_exec($ch);
             }
-$email_admin = "sm@aiwa.rent";
+$email_admin = "shuroffrashiday@yandex.ru";
 
 if(isset($_POST['phone__rent']) and isset($_POST['email__rent']) and isset($_POST['name__rent']) and isset($_POST['comm__rent'])) {
 		$email = $_POST['email__rent'];
@@ -3756,7 +3756,7 @@ if(isset($_POST['phone__rent']) and isset($_POST['email__rent']) and isset($_POS
 		// message_to_telegram($message)
 		echo "<style> .form__thx.form__block__thx { display: block; } button.btn__thx {display: none;} </style>";
 }
-?> -->
+?>
 
         <form class="rent__inner" method="POST" action="/#rent">
           <div class="rent__cars">

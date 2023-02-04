@@ -588,7 +588,11 @@ article {
   color: #000000;
   margin-left: 150px;
 }
-
+@media screen and (max-width: 1024px) {
+  .cars__item__circle {
+    bottom: -20px !important;
+  }
+}
 .kaif__top {
   position: absolute;
   top: 170px;
@@ -1374,10 +1378,10 @@ header {
   margin-right: 16px;
 }
 .cars__item__circle {
-  bottom: 20px;
+  bottom: 50px;
   position: relative;
   display: block;
-  margin-top: -30px;
+  /* margin-top: -30px; */
 }
 
 .item__circle > h4 {
@@ -1464,6 +1468,7 @@ header {
 }
 
 .cars__down {
+  height: auto;
   /* height: 1681px; */
 }
 
@@ -3152,7 +3157,7 @@ footer {
   }
 
   .cars__down {
-    height: 1501px;
+    /* height: 1501px; */
   }
   /* end cars */
 
@@ -3460,9 +3465,9 @@ footer {
     display: block;
   }
 
-  .cars__item__circle {
+  /* .cars__item__circle {
     bottom: -28px;
-  }
+  } */
 
   /* end swiper */
 
@@ -3687,7 +3692,7 @@ footer {
   }
 
   .cars__down {
-    height: 1501px;
+    /* height: 1501px; */
   }
 
   .item__circle > h4,

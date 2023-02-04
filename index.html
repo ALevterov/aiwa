@@ -16,6 +16,7 @@
     />
     <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="./js/calculator.js" defer></script>
   </head>
   <body>
     <article style="overflow: hidden">
@@ -3584,7 +3585,7 @@
             />
             <div class="calc__select">
               <!-- <h4>Выбрать другой автомобиль</h4> -->
-              <select id="cars_picker" onchange="cars_date()">
+              <select id="cars_picker" onchange="calculateCost()">
                 <option value="Rolls Royce Cullinan">
                   Выбрать другой автомобиль
                 </option>
@@ -3638,7 +3639,7 @@
                 <input
                   type="text"
                   id="datepicker"
-                  onchange="begin_date()"
+                  onchange="calculateCost()"
                   class="date"
                   readonly="readonly"
                   placeholder="выберите дату "
@@ -3653,7 +3654,7 @@
                 <input
                   type="text"
                   id="datepicker2"
-                  onchange="end_date()"
+                  onchange="calculateCost()"
                   class="date2"
                   readonly="readonly"
                   placeholder="выберите дату "
@@ -3688,49 +3689,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      function begin_date() {
-        let input_taker = document.getElementById('datepicker').value
-        console.log(Number(input_taker[0] + input_taker[1]))
-        document.getElementById('begin__date').innerHTML = input_taker
-        return Number(input_taker[0] + input_taker[1])
-      }
-
-      function end_date() {
-        let input_taker = document.getElementById('datepicker2').value
-        document.getElementById('end__date').innerHTML = input_taker
-        return Number(input_taker[0] + input_taker[1])
-      }
-
-      function cars_date() {
-        let input_taker = document.getElementById('cars_picker').value
-
-        let pictureList = {
-          'Rolls Royce Cullinan': '4500',
-          'Rolls Royce Dawn': '3600',
-          'Bentley Bentayga': '4000',
-          'Ferrari F8': '4000',
-          'Ferrari Portofino': '3600',
-          'Lamborghini URUS': '4500',
-          'Lamborghini Huracan 2022': '3300',
-          'Lamborghini Huracan 2023': '4500',
-          'Mercedes G63': '2000',
-          'Porsche 911': '1800',
-          'Porsche Cayman 718': '3200',
-        }
-
-        let start_date = begin_date()
-        let fis_date = end_date()
-        let finish_date = fis_date - start_date
-        let finish_price = Number(pictureList[input_taker]) * finish_date + 5000
-        document.getElementById('end__day').innerHTML = finish_date
-        document.getElementById('end__price').innerHTML = finish_price
-
-        let cars_date = Number(input_taker)
-        return cars_date
-      }
-    </script>
 
     <section class="rent" id="rent">
       <div class="container">

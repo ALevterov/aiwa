@@ -775,7 +775,10 @@ section {
 .burger span::before {
   top: -9px;
 }
-
+.social_container {
+  display: flex;
+  flex-wrap: nowrap;
+}
 .burger span::after {
   top: 9px;
 }

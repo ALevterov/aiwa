@@ -968,7 +968,13 @@ header {
   display: flex;
   align-items: center;
 }
-
+.values__item {
+  height: 306px;
+}
+.values__item.values__down {
+  height: auto;
+  padding-bottom: 60px;
+}
 .nav__booking {
   height: 46px;
   border: 0.865979px solid #ffffff;
@@ -2608,10 +2614,13 @@ button.btn__thx {
   border-radius: 12px;
   position: relative;
   transition: 0.3s;
-
-  height: 100%;
 }
-
+.values__item.swiper-slide {
+  height: 281px;
+}
+.values__item.swiper-slide.values__down {
+  height: auto;
+}
 .values__shadow {
   background: url(../image/shadow_cart2.png);
   width: 386px;
@@ -2684,7 +2693,7 @@ button.btn__thx {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 15px;
+  bottom: 25px;
   width: 100%;
   cursor: pointer;
   z-index: 99;
@@ -2695,7 +2704,7 @@ button.btn__thx {
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
-  line-height: 47px;
+  /* line-height: 47px; */
   color: #f8c790;
   margin-right: 10px;
 }
@@ -3357,7 +3366,7 @@ footer {
   /* values */
   .values__item {
     width: 298.56px;
-    height: 225.44px;
+    /* height: 225.44px; */
   }
 
   .values__item > p {

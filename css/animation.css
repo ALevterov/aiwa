@@ -111,7 +111,7 @@
   font-weight: 700;
   font-size: 113.218px;
   line-height: 133px;
-  background: radial-gradient(
+  /* background: radial-gradient(
       24.8% 120.54% at 67.74% 108.14%,
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 100%
@@ -119,7 +119,13 @@
     #edc89e;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background-clip: text; */
+  color: #edc89e;
+  background: transparent;
+
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
 }
 
 .main__line {

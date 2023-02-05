@@ -2381,6 +2381,7 @@ button.btn__thx {
   margin: 10px 0px;
   position: relative;
   transition: 0.3s;
+  padding-top: 15px;
 }
 
 .cond__shadow {
@@ -2602,11 +2603,13 @@ button.btn__thx {
 
 .values__item {
   width: 386px;
-  height: 281px;
+  /* height: 281px; */
   background: #181818;
   border-radius: 12px;
   position: relative;
   transition: 0.3s;
+
+  height: 100%;
 }
 
 .values__shadow {
@@ -3705,6 +3708,7 @@ footer {
     align-items: center;
     justify-content: center;
     margin: 0px 0px 0px 0px;
+    margin-bottom: 35px;
   }
 
   .cars__swipe > span {
@@ -3853,6 +3857,7 @@ footer {
   .rent__inner {
     max-width: 329px;
     margin: 0 auto;
+    gap: 0px;
   }
 
   .rent__date {
@@ -4014,6 +4019,7 @@ footer {
     display: grid;
     justify-content: center;
     margin: 20px 10px;
+    margin-top: 0;
   }
 
   .cond__inner__mobile__scroll {
@@ -4047,6 +4053,7 @@ footer {
     font-size: 15.5491px;
     line-height: 23px;
     margin: 15px auto;
+    margin-top: 0;
   }
 
   /* .cond__down {
@@ -4138,6 +4145,7 @@ footer {
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    align-items: stretch;
   }
 
   .values__inner__mobile::-webkit-scrollbar {
@@ -4287,6 +4295,7 @@ footer {
   .calc__inner {
     display: grid;
     justify-content: center;
+    gap: 0px;
   }
 
   .rent__inner {
